@@ -33,6 +33,7 @@ jobs:
     - name: Build and publish
       env:
         USERS_COVER: ${{ secrets.USERS_COVER }}
+        dingtalkWebhook: ${{secrets.dingtalkWebhook}}
       run: |
         echo "$USERS_COVER" > ./config.json
         python main.py
